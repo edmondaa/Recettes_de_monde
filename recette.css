@@ -42,9 +42,9 @@ div.categorie {
 }
 div.contenue {
     background-color: white;
-    margin: 60px 10% 80px 10%;
-    padding: 0px 30px 30px 30px ;
-    min-width: 350px;
+    margin: 60px 8px 40px 8px;
+    padding: 0px 7px 20px 7px ;
+    
     box-shadow: -2px 1px 10000px 9px   black;
     overflow: visible;
     
@@ -79,11 +79,11 @@ table.info {
    
     color: white; 
     background-color:#6C829DC0;
-    height: 80px;
+    height: 50px;
 }
 table.info td{
     text-align: center;
-    font-size: 13px;
+    font-size: 12px;
     
     vertical-align: top;
     max-width: fit-content;
@@ -92,7 +92,7 @@ table.info td{
     
 }
 table.info th{
-    font-size: 16px;
+    font-size: 14px;
     vertical-align: bottom;
     padding-bottom: 4px;
     max-width: fit-content;
@@ -111,7 +111,7 @@ img.centre {
 }
 
 div.colonne{
-    width: 45%;
+    width: 100%;
     margin-top: 20px;
 }
 div.colonne h2{
@@ -124,18 +124,10 @@ div.colonne h2{
 }
 div.colonne1 {
     display: inline-block;
-    margin-right: 10%;
+    
 }
 
-div.colonne2 {
-    float: right;
-    /* float: right; le deplace a droite */
-    /* quand un element deveien float alors il ne peut peut plus imposer sa taille a l'element 'sur' 
-    lequel il est positionne, c'est-a-dire que que si les element debordent alors la taille de page n'est synchronise avec .
-    Mais c'est avec l'overflow qu'on peut regler ca */
-    
-    
-}
+
 
 div.ligne p{
     text-align: center;
@@ -179,6 +171,60 @@ table.preparation tr{
     height: 40px;
 }
 
+@media only screen and (min-width: 768px) {
+/* Style pour ordinateur*/
+
+div.contenue {
+    min-width: 350px;
+    margin: 60px 10% 80px 10%;
+    padding: 0px 30px 30px 30px ;
+    
+}
+
+table.info {
+    
+    height: 80px;
+}
+
+table.info th{
+    font-size: 16px;
+}
+
+table.info td{
+    
+    font-size: 14px;
+}
+
+div.colonne{
+    width: 45%;
+}
+
+div.colonne1 {
+    margin-right: 10%;
+}
+
+div.colonne2 {
+    float: right;
+    /* float: right; le deplace a droite */
+    /* quand un element deveien float alors il ne peut peut plus imposer sa taille a l'element 'sur' 
+    lequel il est positionne, c'est-a-dire que que si les element debordent alors la taille de page n'est synchronise avec .
+    Mais c'est avec l'overflow qu'on peut regler ca */
+    
+    
+}
+
+}
+
+@media only screen and (min-width: 900px) {
+    div.contenue {
+        margin-left: auto;
+        margin-right: auto;
+        width: 645px;
+
+        
+    }
+
+}
 
 /* <link rel="stylesheet" href="recette.css"> permet de charcher un fichier css. -->
          <!-- le style s'applique au body et au/x paragraphe/s dans la class textrecette  -->
