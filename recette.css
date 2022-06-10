@@ -1,0 +1,208 @@
+* {
+    /* L'etoile * permet de selectionner tout dans le HTML*/
+    overflow: auto;
+    /*overflow: auto; est la pour adapter les elements qui deppassent.*/ 
+}
+
+body {
+    background-color: #8BA1BB;
+    font-family: Arial;
+    margin: 0;
+    
+}
+
+
+p.categorie {
+    
+    background-color: black;
+    color: white;
+    display: inline-block;
+    margin-top: -15px;
+    padding: 8px 18px;
+    /* le fait d'ajouter le padding va elargir le block autour du text pour que la marge sois effectue*/
+    margin-bottom: 0px;
+    font-weight: bold;
+    /* font-weight: bold; mets le text en gras */
+    font-size: 16px;
+    
+}
+div.categorie {
+
+    margin-bottom: 0x;
+    /*Est la pour faire entrer le block recette dans la partie enbas.*/
+    margin-top: 0px;
+    overflow: visible;
+}
+
+.centre{
+    text-align: center; 
+    width:100% ;  
+    /* width:100% ;  indique que le contenue va entrer dans la totalite de la largeur de l'ecran */
+
+}
+div.contenue {
+    background-color: white;
+    margin: 60px 10% 80px 10%;
+    padding: 0px 30px 30px 30px ;
+    min-width: 350px;
+    box-shadow: -2px 1px 10000px 9px   black;
+    overflow: visible;
+    
+}
+h1 {
+    text-align: center;
+    margin-bottom: 12px;
+    margin-top: 15px;
+}
+p.description {
+    text-align: center;
+    max-width: 400px;
+    display: inline-block;
+
+}
+div.separateur {
+    width: 100px;
+    height: 1px;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+div.info{
+    position: relative ;
+}
+
+table.info {
+    position: absolute; 
+    bottom: 0; 
+    width: 100%;
+   
+    color: white; 
+    background-color:#6C829DC0;
+    height: 80px;
+}
+table.info td{
+    text-align: center;
+    font-size: 13px;
+    
+    vertical-align: top;
+    max-width: fit-content;
+
+    
+    
+}
+table.info th{
+    font-size: 16px;
+    vertical-align: bottom;
+    padding-bottom: 4px;
+    max-width: fit-content;
+    
+
+
+}
+img.centre {
+    display: block;
+    max-height: 400px;
+    object-fit: cover;
+    min-height: 200px;
+    /*object-fit: cover; adapte la largeur et longueur de l'image en coupant les bords s'il le faut.
+    min-height: 200px; permet qu'au cas ou l'image ne s'aficherait pas, il y aurait au moins un espace pour que la table ne se surpose avec les autres elements*/
+    background-color: grey;
+}
+
+div.colonne{
+    width: 45%;
+    margin-top: 20px;
+}
+div.colonne h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 15px;
+    border-bottom: 5px solid #6C829D;
+    /* j'ajoute une bordure en bas*/
+    padding-bottom: 5px;
+}
+div.colonne1 {
+    display: inline-block;
+    margin-right: 10%;
+}
+
+div.colonne2 {
+    float: right;
+    /* float: right; le deplace a droite */
+    /* quand un element deveien float alors il ne peut peut plus imposer sa taille a l'element 'sur' 
+    lequel il est positionne, c'est-a-dire que que si les element debordent alors la taille de page n'est synchronise avec .
+    Mais c'est avec l'overflow qu'on peut regler ca */
+    
+    
+}
+
+div.ligne p{
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid lightgray;
+    padding: 8px 0;
+    margin-top: 4px;
+    margin-bottom: 0px;
+}
+
+table.preparation p.numero{
+    background-color:#6C829D ;
+    color: white;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    padding-top: 4px;
+    /* le padding va additionner le width et height en plus de lui-meme.*/
+    box-sizing: border-box;
+    /* Mais la commande box-sizing: border-box; permet de garder le width et le height peu import le padding. */
+    border-radius: 50%;
+    /* border-radius: 50%; permet d'arrondir les bords, un arrodissement a 50% va creer un cercle.*/
+    margin: 0;
+
+}
+
+table.preparation td{
+    vertical-align: top;
+}
+
+table.preparation td.preparation_etape{
+    font-size: 14px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+
+}
+
+table.preparation tr{
+    height: 40px;
+}
+
+
+/* <link rel="stylesheet" href="recette.css"> permet de charcher un fichier css. -->
+         <!-- le style s'applique au body et au/x paragraphe/s dans la class textrecette  -->
+
+         <!--  .textrecette, h1 {
+                   background-color: black;
+                   color: white; }
+
+                Il existe des code hexadecimal pour les couleurs.
+                display: inline-block; permet que la couleur d'arriere plans du text n'occuppe que la place necessaire et non pas la 
+                ligne entiere mais on peut y ajouter des marges.
+
+                Dans ce cas j'aplique le style a la classe .textrecette et au h1.
+
+
+                Le margin:60px 10% 80px 10% correspond a la marge, c'est espace que par rapport au contenue dans la page web et 
+                les bordures de l'ecran, ses parametres sont range dans l'ordre HAUT, DROITE, BAS, GAUCHE. Le px correspond
+                aux pixels. Les nombres(60px et 80px) restent fixes mais les pourcentages(10% et 10%) s'adapte par raport a
+                taille de  l'ecran.
+
+                Le padding c'est comme le margin mais il's applique partout de facon egale.
+
+                Max-width:400px; force que le text a ce que sa largeur(width) ne depasse pas 400px, ce qui aura pour consequnce
+                d'ajouter une ligne supplementaire dans le cas ou la largeur tente de deppasser les 400px.
+
+                
+         -->*/
